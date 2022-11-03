@@ -1,0 +1,84 @@
+.login-box {
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+
+    .col-lg-3 {
+        border-radius: var(--card-border-radius);
+    }
+
+}
+
+.login-form{
+    background-color: var(--white-color);
+    border-radius: var(--card-border-radius);
+    padding: var(--card-padding);
+    text-align: center;
+}
+
+.login-input {
+    width: 100%;
+    border-radius: var(--border-radius);
+    padding: var(--search-padding);
+    background-color: var(--light-color);
+    font-size: 15px;
+
+    &:focus {
+        outline: none !important;
+        border-color: var(--primary-color);
+        box-shadow: 0 0 3px #8ab1dd;
+    }
+}
+
+.login-btn {
+    background-color: var(--primary-color);
+    color: white;
+    display: inline-block;
+    padding: var(--btn-padding);
+    font-weight: 500;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 15px;
+
+    &:hover {
+        opacity: 0.8;
+    }
+}
+
+.forgot-password {
+    margin-top: 13px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgb(190, 186, 186);
+
+    a {
+        text-decoration: none;
+        font-size: 14px;
+
+        &:hover {
+            color: green;
+        }
+    }
+}
+
+.create-account {
+    background-color: var(--success-color);
+    color: white;
+    display: inline-block;
+    padding: var(--btn-padding);
+    font-weight: 500;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 15px;
+
+    &:hover {
+        opacity: 0.8;
+    }
+
+    a {
+        text-decoration: none;
+        font-size: 15px;
+        color: white;
+    }
+}

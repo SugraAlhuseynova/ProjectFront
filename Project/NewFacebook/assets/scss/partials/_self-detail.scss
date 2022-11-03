@@ -1,0 +1,18 @@
+.edit-profile{
+    color: var(--dark-color);
+    border: 1px solid var(--primary-color);
+    padding: 0 10px;
+    border-radius: var(--border-radius);
+    font-size: 15px;
+    margin-top: 6px;
+    &:hover{
+        background-color: var(--light-color);
+    }
+}
+
+
+@media screen and (max-width: 920px) {
+    .self-detail-right{
+        grid-column: 1/3;
+    }
+}

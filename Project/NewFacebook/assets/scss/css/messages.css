@@ -1,0 +1,5 @@
+.message-right {
+  -ms-grid-columns: auto 30vw;
+      grid-template-columns: auto 30vw;
+}
+/*# sourceMappingURL=messages.css.map */

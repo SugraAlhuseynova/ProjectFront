@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,cAAc,CAAA;EACV,qBAAqB,EAAE,SAAS;CAEnC",
+    "sources": [
+        "../partials/messages.scss"
+    ],
+    "names": [],
+    "file": "messages.css"
+}
