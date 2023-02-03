@@ -1,4 +1,4 @@
-let primaryColor = localStorage.getItem('primaryColor') || '#3d73d7';
+let primaryColor = JSON.parse(localStorage.getItem('primaryColor')) || '#3d73d7';
 
 /*------------------------------ Theme ------------------------------*/
 const customizeTheme = document.querySelector('.customize-theme');
@@ -56,51 +56,35 @@ colorPalette.forEach(color => {
  
 
 /*------------------------------ background color change ------------------------------*/
-const backgroundPalette = document.querySelectorAll('.choose-bg div')
-const ChangeActiveBgColorClass = () =>{
-    backgroundPalette.forEach(bgColor=>{
-        bgColor.classList.remove('active');
-    })
-}
+const backgroundPalette = document.querySelectorAll(".choose-bg div");
+const ChangeActiveBgColorClass = () => {
+    backgroundPalette.forEach((bgColor) => {
+        bgColor.classList.remove("active");
+    });
+};
 
-let lightColorLigthness;
-let whiteColorLigthness;
-let darkColorLigthness;
+let lightColorParams = [17, 100, 95];
+let whiteColorParams = [95, 20, 15];
+let darkColorParams = [90, 10, 0];
 
-const ChangeBg = ()=>{
-    root.style.setProperty('--light-color-lightness', lightColorLigthness);
-    root.style.setProperty('--dark-color-lightness', darkColorLigthness);
-    root.style.setProperty('--white-color-lightness', whiteColorLigthness);
-}
+const ChangeBg = (params) => {
+    let [darkColorLigthness, whiteColorLigthness, lightColorLigthness] = params;
+    root.style.setProperty("--light-color-lightness", `${lightColorLigthness}%`);
+    root.style.setProperty("--dark-color-lightness", `${darkColorLigthness}%`);
+    root.style.setProperty("--white-color-lightness", `${whiteColorLigthness}%`);
+    localStorage.setItem('main-theme-params', JSON.stringify(params));
+};
 
-backgroundPalette.forEach((bgColor) =>{
-    bgColor.addEventListener('click', {
+let params = JSON.parse(localStorage.getItem('main-theme-params')) || [17, 100, 95];
+ChangeBg(params)
 
-    })
-})
-
-// bg1.addEventListener('click',()=>{
-//     darkColorLigthness = '17%';
-//     whiteColorLigthness = '100%';
-//     lightColorLigthness = '95%';
-
-//     ChangeBg();
-// })
-// bg2.addEventListener('click',()=>{
-//     darkColorLigthness = '95%';
-//     whiteColorLigthness = '20%';
-//     lightColorLigthness = '15%';
-
-//     ChangeBg();
-// })
-// bg3.addEventListener('click',()=>{
-//     darkColorLigthness = '95%';
-//     whiteColorLigthness = '10%';
-//     lightColorLigthness = '0%';
-
-//     ChangeBg();
-// })
-
+backgroundPalette.forEach((bgColor) => {
+    bgColor.addEventListener("click", () => {
+        if (bgColor.classList[0] === 'light-theme') ChangeBg(lightColorParams);
+        if (bgColor.classList[0] === 'dark-theme') ChangeBg(whiteColorParams);
+        if (bgColor.classList[0] === 'night-theme') ChangeBg(darkColorParams);
+    });
+});
 
 
 /*------------------------------ Sidebar ------------------------------*/

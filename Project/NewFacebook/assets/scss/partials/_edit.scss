@@ -3,6 +3,8 @@
     border-radius: var(--card-border-radius);
     background-color: var(--white-color);
     width: 70%;
+  
+
 }
 
 .change-profile-photo {
@@ -24,6 +26,7 @@
     width: 80%;
     background-color: var(--light-color);
     margin: 5px 0;
+    color: var(--dark-color);
 }
 
 .edit-input-box {
@@ -31,6 +34,7 @@
     grid-template-columns: 120px auto;
     margin: 12px 0;
     align-items: center;
+    
     label {
         font-size: 15px;
     }

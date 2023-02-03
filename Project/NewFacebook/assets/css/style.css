@@ -2639,6 +2639,7 @@ body {
   width: 80%;
   background-color: var(--light-color);
   margin: 5px 0;
+  color: var(--dark-color);
 }
 
 .edit-input-box {
@@ -2668,6 +2669,7 @@ body {
   background-color: var(--white-color);
   border-radius: var(--border-radius);
   font-size: 13px;
+  color: var(--primary-color);  
 }
 
 #edit-submit:hover {
